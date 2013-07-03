@@ -1,0 +1,19 @@
+{
+  "name": "Senshu Web Login",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "Logining Automaticly in Wifi of Senshu University",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "https://wcgw.senshu-u.ac.jp/*"
+  ],
+  "content_scripts":[
+    {
+      "matches": ["https://wcgw.senshu-u.ac.jp/*"],
+      "js": ["jquery-1.7.2.min.js","main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
